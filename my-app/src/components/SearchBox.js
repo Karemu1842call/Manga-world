@@ -14,7 +14,7 @@ function SearchBox(){
             const res=await fetch(url);
             const data=await res.json();
             console.log(data);
-            setAnimes(data.results)
+            setAnimes(data)
         }catch(err){
             console.log(err)
         }
@@ -28,11 +28,11 @@ function SearchBox(){
         </div>
        </form>
        <div className='card-list'>
-        {animes.map(anime =>(
+        {animes.map(item =>(
             <div>
-                <hi>{anime.name}</hi>
+                <hi>{item.name}</hi>
                 <img className='card--image'
-                src={anime.image}/>
+              s  src={item.image}/>
             </div>
         ))}
        </div>

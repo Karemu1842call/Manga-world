@@ -3,7 +3,7 @@
   background-color: #282c34;
   display: flex;
   flex-direction: column;
-  align-items: left;
+  align-items:center;
   justify-content: left;
   font-size: calc(10px + 2vmin);
   color: white;
@@ -26,7 +26,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: 20px;
   color: white;
 }
 
@@ -48,7 +48,7 @@
   background-color: #282c34;
   display: flex;
   flex-direction: column;
-  align-items: left;
+  align-items: center;
   justify-content: left;
   font-size: calc(10px + 2vmin);
   color: white;
@@ -60,13 +60,12 @@
   margin-bottom: 1rem;
 }
 .kichwa {
-  align-items: left;
   position: relative;
   text-align: left;
   background-color: #282c34;
   display: flex;
   flex-direction: column;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(30px + 1vmin);
   color: rgba(255, 255, 255, 0.87);
 
 }
@@ -74,8 +73,8 @@
   background-color: #282c34;
   display: flex;
   flex-direction: column;
-  align-items: left;
-  justify-content: left;
+  align-items: center;
+  justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
 }
@@ -94,6 +93,8 @@
   padding: 1rem 7rem;
   margin: 0 left;
   border-radius: 20px;
+  justify-content: center;
+  align-items: center;
   }
   .btn:hover{
     box-shadow: 0 4px #141122;
@@ -105,6 +106,7 @@
   }
 .form {
   display: grid;
+  align-items: center;
 }
 @media (min-width:786px){
 
@@ -112,4 +114,11 @@
 .btn :focus{
   background-color: aqua;
 }
-
+.tafuta :focus{
+  box-shadow: 0 4px #61dafb;
+  top: 4px;
+}
+.bar {
+  align-items: center;
+  justify-content: center;
+}
