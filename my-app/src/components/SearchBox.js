@@ -2,13 +2,13 @@ import React,{useState} from 'react';
 function SearchBox(){
      
    const [query,setQuery]=useState('');
-   const [animes, setAnimes] =useState({})
+   const [animes, setAnimes] =useState([])
 
     const searchAnime= async (e)=>{
         e.preventDefault();
         console.log("submitting")
         const url ='https://my-json-server.typicode.com/Karemu1842call/project-json-server/results';
-       const animes=[{url}] 
+    
         
         try {
             const res=await fetch(url);
@@ -28,7 +28,13 @@ function SearchBox(){
         </div>
        </form>
        <div className='card-list'>
-      
+        {animes.map(anime =>(
+            <div>
+                <hi>{anime.name}</hi>
+                <img className='card--image'
+                src={anime.image}/>
+            </div>
+        ))}
        </div>
        </>
     ) }
