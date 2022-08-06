@@ -1,5 +1,5 @@
 # Manga-world
-This program is created to seach for animes to get results.
+  This program is created to seach for animes to get results.
 #How to get started.
   1.copy the ssh link in my repository.
   2.Open your terminal.
