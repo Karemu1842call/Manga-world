@@ -3,7 +3,6 @@ import logo from './logo.svg';
 import './App.css';
 import Home from './components/Home';
 import SearchBox from './components/SearchBox';
-
 function App() {
   useEffect(() => {
     fetch("")

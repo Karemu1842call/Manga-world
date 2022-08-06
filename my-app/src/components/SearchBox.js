@@ -6,7 +6,6 @@ function SearchBox(){
 
     const searchAnime= async (e)=>{
         e.preventDefault();
-        console.log("submitting")
         const url ='https://my-json-server.typicode.com/Karemu1842call/project-json-server/results';
     
         
@@ -22,20 +21,27 @@ function SearchBox(){
     return(
        <>
        <form className="form" onSubmit={searchAnime}>
+        <label className='label' htmlFor='query'>Anime name</label>
          <div id="search" className="bar">
-             <input value={query} name="query" className="tafuta" placeholder='Enter anime name ie Naruto' onChange={(e) => setQuery(e.target.value)} ></input>
+             <input value={query} name="query" className="tafuta" placeholder='Enter anime name ie Naruto' onInput={(e) => setQuery(e.target.value)} ></input>
                 <button type="submit" className='btn'>SEARCH...</button>
         </div>
        </form>
-       <div className='card-list'>
-        {animes.map(item =>(
-            <div>
-                <hi>{item.name}</hi>
+       <div className='card-list'  >
+        {animes.map(anime =>(
+            <div className='card' key={anime.id}>
+                <h1>{anime.name}</h1>
+                <h2>{anime.maincharacter}</h2>
                 <img className='card--image'
-              s  src={item.image}/>
-            </div>
+                src={anime.image}
+                alt={anime.name + 'poster'}/>
+                <div className="card--content">
+                    <h2 className="card--tittle">{anime.maincharacter}</h2>
+                    </div>
+                    </div>
         ))}
        </div>
        </>
+       
     ) }
 export default SearchBox;
